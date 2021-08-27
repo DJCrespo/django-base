@@ -24,9 +24,25 @@
 
 ## Environment
 
+## Instalation (is new project)
+
+    $ python3 -m venv venv
+    $ source venv/bin/activate
+    $ pip install django
+    $ pip freezer > requirements.txt
+    $ django-admin startproject config
+
+## Environment
+
 Application running in multiple environments like DEV and PROD. All env variables used in this application are available in `.env.example`, feel free to setup your own environment configuration.
 
 ### DEV
+
+Create file .env and add this (copy values from config/settings.py):
+
+    - PRIVATE_KEY
+    - DEBUG
+    - ALLOWED_HOST
 
 Just make a copy from `.env.local.example` and/or rename to `.env.local` and setup your variables. Then run in terminal:
 
